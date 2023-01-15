@@ -1,0 +1,22 @@
+.rlm-catagory-tile{
+    width: 100%;
+
+    &_img{
+        width: 100%;
+        min-height: 140px;
+        img{
+            width: 100%;
+        }
+    }
+
+    &_cnt{
+        width: 100%;
+        min-height: 24px;
+        font-size: 14px;
+        line-height: 20px;
+        color: #000;
+        text-align: center;
+        overflow: hidden;
+        margin-top: 6px;
+    }
+}
