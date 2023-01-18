@@ -1,13 +1,34 @@
 import { Link } from "react-router-dom"
 
-im
+import { useCountdown } from "../hooks/countdown"
+
+// Checking wether the product has offer
+const ProductPrice = ({currentPrice,offer}) => {
+    if(offer) {
+        const offerPrice = currentPrice -((currentPrice / 100) * offer)
+        return(
+            <>
+            <div className="rlm-prod-tile__price">
+                {offerPrice}
+            </div>
+            <div className="rlm-prod-tile__price rlm-prod-tile__price--offer">
+                {currentPrice}
+            </div>
+            </>
+        )
+    }
+    return(
+        <div className="rlm-prod-tile__price">
+            {currentPrice}
+        </div>
+    )
+}
 
 
 export const ProdTile = ({img,name,price,offer,specialTime}) => {
 
+    const {days,hours,minutes,seconds} = useCountdown(specialTime)
 
-    const currentPrice = price
-    const offerPrice = currentPrice -((currentPrice / 100) * offer)
     return(
         <Link className="rlm-prod-tile">
             <div className="rlm-prod-tile__img">
@@ -15,42 +36,46 @@ export const ProdTile = ({img,name,price,offer,specialTime}) => {
             </div>
             <div className="rlm-prod-tile__cnt">
                 <div className="rlm-prod-tile__title">
-                    {/* {name} */}
+                    {name}
                 </div>
                 <div className="rlm-prod-tile__price_block">
-                    <div className="rlm-prod-tile__price">
-                        {/* {offerPrice} */}
-                    </div>
-                    <div className="rlm-prod-tile__price rlm-prod-tile__price--offer">
-                        {/* {currentPrice} */}
-                    </div>
+                    <ProductPrice currentPrice={price}  offer={offer}/>
                 </div>
-                <div className="rlm-prod-tile__count-down">
-                    <div className="rlm-prod-tile__offer-time">
-                        {/* {
-                            timerDate + "D"
-                        }     */}
-                    </div>
-                    <div>
-                        |
-                    </div>
-                    <div className="rlm-prod-tile__offer-time">
-                    {/* {
-                        timerHours
-                    }     */}
-                    </div> 
-                    <div>:</div>
-                    <div className="rlm-prod-tile__offer-time">
-                        {/* {
-                            timerMinuts
-                        } */}
-                    </div> 
-                    <div className="rlm-prod-tile__offer-time">
-                        {/* {
-                            timerseconds
-                        } */}
-                    </div>
-                </div>
+                {
+                    specialTime &&
+                        <div className="rlm-prod-tile__count-down">
+                            {
+                                days && 
+                                <>
+                                    <div className="rlm-prod-tile__offer-time">
+                                        {
+                                            days + "D"
+                                        }    
+                                    </div>
+                                    <div>
+                                        |
+                                    </div>
+                                </>
+                            }
+                            <div className="rlm-prod-tile__offer-time">
+                            {
+                                hours
+                            }    
+                            </div> 
+                            <div>:</div>
+                            <div className="rlm-prod-tile__offer-time">
+                                {
+                                    minutes
+                                }
+                            </div> 
+                            <div>:</div>
+                            <div className="rlm-prod-tile__offer-time rlm-prod-tile__offer-time--sec">
+                                {
+                                    seconds
+                                }
+                            </div>
+                        </div>
+                }   
             </div>
         </Link>
     )

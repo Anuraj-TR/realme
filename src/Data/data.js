@@ -113,7 +113,7 @@ export const mobProducts = [
     img:"/assets/images/phone-prd2.png",
     price:"8499",
     offer:"8",
-    specialTime:"feb-12-2023",
+    specialTime:"jan-22-2023",
   },
   {
     id:"prod-3",
@@ -121,7 +121,7 @@ export const mobProducts = [
     img:"/assets/images/phone-prd2.png",
     price:"10499",
     offer:"9",
-    specialTime:"feb-12-2023",
+    specialTime:"feb-1-2023",
   },
   {
     id:"prod-4",
