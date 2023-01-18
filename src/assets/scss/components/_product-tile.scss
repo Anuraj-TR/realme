@@ -26,6 +26,7 @@
     &__title{
         color: $color-black;
         margin-bottom: $spacer-2;
+        min-height: 37px;
     }
 
     &__price_block{
@@ -68,6 +69,20 @@
         &--sec{
             background-color: $color-yellow;
             color: $color-black;
+        }
+    }
+}
+
+@include mobile {
+    .rlm-prod-tile{
+        padding: $spacer-1;
+        &__img{
+            min-width: unset;
+            min-height: auto;
+        }
+        &__offer-time{
+            min-width: 20px;
+            font-size: 10px;
         }
     }
 }

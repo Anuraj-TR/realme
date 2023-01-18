@@ -66,3 +66,26 @@
     }
 
 }
+
+@include mobile{
+    .rlm-special-dls{
+        padding: $spacer-3 $spacer-2;
+        &__title{
+            font-size: 16px;
+        }
+
+        &__link{
+            font-size: 14px;
+        }
+        &__tile-wrap{
+            margin-left: -$spacer-1;
+            margin-right: -$spacer-1;
+
+            .rlm-prod-tile{
+                width: calc(33% - $spacer-2);
+                margin-right: $spacer-1;
+                margin-left: $spacer-1;
+            }
+        }
+    }
+}

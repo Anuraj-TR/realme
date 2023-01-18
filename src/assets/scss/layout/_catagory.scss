@@ -17,3 +17,33 @@
 
 
 }
+
+@include tablet-pro{
+    .rlm-catagory{
+        &-tile__wrapper{
+            justify-content: flex-start;
+        }
+        &-tile{
+            width: calc((100% / 5) - $spacer-3);
+        }
+    }
+}
+
+@include mobile-tablet{
+    .rlm-catagory{
+        &-tile__wrapper{
+            justify-content: flex-start;
+        }
+        &-tile{
+            width: calc(25% - $spacer-3);
+        }
+    }
+}
+
+@include mobile{
+    .rlm-catagory{
+        &-tile__wrapper{
+            justify-content: space-between;
+        }
+    }
+}

@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom"
+import {BiRupee} from "react-icons/bi"
 
 import { useCountdown } from "../hooks/countdown"
 
@@ -9,17 +10,17 @@ const ProductPrice = ({currentPrice,offer}) => {
         return(
             <>
             <div className="rlm-prod-tile__price">
-                {offerPrice}
+               <BiRupee />{offerPrice}
             </div>
             <div className="rlm-prod-tile__price rlm-prod-tile__price--offer">
-                {currentPrice}
+            <BiRupee />{currentPrice}
             </div>
             </>
         )
     }
     return(
         <div className="rlm-prod-tile__price">
-            {currentPrice}
+           <BiRupee />{currentPrice}
         </div>
     )
 }

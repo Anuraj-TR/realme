@@ -10,7 +10,7 @@ const specialDeals = mobProducts.filter(prdt => !prdt.specialTime).slice(0,3);
             <div className="rlm-special-dls">
                 <div className="rlm-special-dls__header">
                     <div className="rlm-special-dls__title">
-                        Super Pricing Deals
+                    Recommend Phones
                     </div>
                     <Link className="rlm-special-dls__link">view more</Link>
                 </div>
