@@ -73,6 +73,14 @@
     }
 }
 
+@include tablet-pro{
+    .rlm-prod-tile{
+        &__price{
+            font-size: 12px;
+        }
+    }
+}
+
 @include mobile {
     .rlm-prod-tile{
         padding: $spacer-1;
@@ -82,6 +90,17 @@
         }
         &__offer-time{
             min-width: 20px;
+            font-size: 10px;
+        }
+        &__price{
+            font-size: 12px;
+        }
+    }
+}
+
+@media (max-width: 391px){
+    .rlm-prod-tile{
+        &__price{
             font-size: 10px;
         }
     }
