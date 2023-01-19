@@ -269,28 +269,28 @@ export const newArrivals = [
 export const recommendePhones = [
   {
     id:"rec-ph1",
-    name:"realme 9i 5G",
+    title:"realme 9i 5G",
     desc:"NEO SPEED AWAKENS",
     img:"/assets/images/phone-prd9.png",
     price:"22499",
   },
   {
     id:"rec-ph2",
-    name:"realme C30",
+    title:"realme C30",
     desc:"Naye Zamane Ka Entertainment",
     img:"/assets/images/phone-prd10.png",
     price:"5499",
   },
   {
     id:"rec-ph3",
-    name:"realme 9i",
+    title:"realme 9i",
     desc:"Mighty in Style",
     img:"/assets/images/phone-prd11.png",
     price:"32499",
   },
   {
     id:"rec-ph4",
-    name:"realme C31",
+    title:"realme C31",
     desc:"Naye Zamane Ka Entertainment",
     img:"/assets/images/phone-prd12.png",
     price:"21499",

@@ -1,6 +1,6 @@
 import { mobProducts } from "../../Data/data"
-import { ProdTile } from "../molicule/product-tile"
 import { SubHeading } from "../attom/heading"
+import { ProdTile } from "../molicule/product-tile"
 
 export const HottestPhones = () => {
     const products = mobProducts.filter(item=> !item.specialTime!="").slice(0,10)
