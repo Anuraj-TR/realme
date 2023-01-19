@@ -6,9 +6,9 @@ This project is a clone of the Realme website, created using React and the creat
 
 To get started with this project, you'll need to have a basic understanding of React and the create-react-app tool.
 
-1 Clone this repository to your local machine
-2 Navigate to the root folder of the project and run npm install to install the necessary dependencies
-3 Run npm start to start the development server and view the project in your browser
+* Clone this repository to your local machine
+* Navigate to the root folder of the project and run npm install to install the necessary dependencies
+* Run `npm start` to start the development server and view the project in your browser
 
 ## Features
 
