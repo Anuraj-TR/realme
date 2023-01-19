@@ -1,0 +1,28 @@
+.rlm-sales-recommended{
+    display: flex;
+    justify-content: space-between;
+    margin-top: $spacer-5;
+    margin-right: -$spacer-2;
+    margin-left: -$spacer-2;
+
+    .rlm-special-dls{
+        width: calc(50% - $spacer-3);
+        margin-right: $spacer-2;
+        margin-left: $spacer-2;
+    }
+}
+
+@include mobile-tablet{
+    .rlm-sales-recommended{
+        flex-direction: column;
+        margin-left: $spacer-0;
+        margin-right: $spacer-0;
+        
+        .rlm-special-dls{
+            width: 100%;
+            margin-left: $spacer-0;
+            margin-right: $spacer-0;
+            margin-bottom: $spacer-3;
+        }
+    }
+}

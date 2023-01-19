@@ -4,6 +4,10 @@ import "./assets/scss/style.scss";
 // componets
 import { Banner } from "./componets/organism/banner";
 import { Catagory } from "./componets/organism/catagory";
+import { SalesRecommended } from "./componets/organism/sales-recommended";
+import { NewArrivals } from "./componets/organism/new-arrivals";
+import { HottestPhones } from "./componets/organism/hottest-phones";
+import { RecommendPhonesLarge } from "./componets/organism/recommend-large";
 
 function App() {
   return (
@@ -11,6 +15,11 @@ function App() {
       <div className="App">
         <Banner />
         <Catagory />
+        <SalesRecommended />
+        <NewArrivals />
+        <HottestPhones />
+        <RecommendPhonesLarge />
+        <HottestPhones />
       </div>
     </Router>
   );

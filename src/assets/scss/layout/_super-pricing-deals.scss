@@ -1,0 +1,91 @@
+.rlm-special-dls{
+    width: 100%;
+    background-color: $color-white;
+    border-radius: 16px;
+    padding: $spacer-4 $spacer-3;
+    &__header{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__title{
+        display: inline-block;
+        font-size: 19px;
+        font-weight: $font-bold;
+        color: $color-black;
+        text-transform: capitalize;
+    }
+
+    &__link{
+        font-size: 16px;
+        font-weight: $font-medium;
+        color: $color-grey;
+        padding: $spacer-2;
+        text-decoration: none;
+        text-transform: capitalize;
+        position: relative;
+        margin-right: $spacer-2;
+        &::after{
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: 0;
+            width: 7px;
+            height: 7px;
+            border: 0;
+            border-top: 2px solid $color-grey;
+            border-right: 2px solid $color-grey;
+            transform: translate(0,-30%) rotateZ(45deg);
+            transition: all 0.2s linear;
+            
+        }
+        &:hover{
+            text-decoration: none;
+            color: $color-grey;
+            &::after{
+                    transform: translate(3px,-30%) rotateZ(45deg);
+                }
+        }
+    }
+
+    &__tile-wrap{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-top: $spacer-2;
+        margin-right: -$spacer-2;
+        margin-left: -$spacer-2;
+
+        .rlm-prod-tile{
+            width: calc(33% - $spacer-3);
+            margin-right: $spacer-2;
+            margin-left: $spacer-2;
+        }
+    }
+
+}
+
+@include mobile{
+    .rlm-special-dls{
+        padding: $spacer-3 $spacer-2;
+        &__title{
+            font-size: 16px;
+        }
+
+        &__link{
+            font-size: 14px;
+        }
+        &__tile-wrap{
+            margin-left: -$spacer-1;
+            margin-right: -$spacer-1;
+
+            .rlm-prod-tile{
+                width: calc(33% - $spacer-2);
+                margin-right: $spacer-1;
+                margin-left: $spacer-1;
+            }
+        }
+    }
+}

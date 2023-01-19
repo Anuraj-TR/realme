@@ -1,0 +1,108 @@
+.rlm-prod-tile{
+    width: 100%;
+    padding: 8px;
+    background-color: $color-white;
+    max-width: 220px;
+    border-radius: 20px;
+    &__img{
+        width: 100%;
+        min-height: 120px;
+        min-width: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: $spacer-2;
+
+        img{
+            width: 100%;
+        }
+    }
+
+    &__cnt{
+        text-align: center;
+        font-size: 14px;
+        font-weight: $font-semi-bold;
+    }
+
+    &__title{
+        color: $color-black;
+        margin-bottom: $spacer-2;
+        min-height: 37px;
+    }
+
+    &__price_block{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: $spacer-2;
+    }
+    &__price{
+        color: $color-red;
+
+        &--offer{
+            font-weight: $font-regular;
+            color: $color-grey;
+            text-decoration: line-through;
+            margin-left: $spacer-2;
+        }
+    }
+
+    &__count-down{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__offer-time{
+        width: auto;
+        min-width: 25px;
+        height: auto;
+        font-size: 12px;
+        font-weight: $font-regular;
+        color: $color-white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: $spacer-1;
+        background-color: $color-black;
+        border-radius: 6px;
+        margin: 0 $spacer-1;
+        &--sec{
+            background-color: $color-yellow;
+            color: $color-black;
+        }
+    }
+}
+
+@include tablet-pro{
+    .rlm-prod-tile{
+        &__price{
+            font-size: 12px;
+        }
+    }
+}
+
+@include mobile {
+    .rlm-prod-tile{
+        padding: $spacer-1;
+        &__img{
+            min-width: unset;
+            min-height: auto;
+        }
+        &__offer-time{
+            min-width: 20px;
+            font-size: 10px;
+        }
+        &__price{
+            font-size: 12px;
+        }
+    }
+}
+
+@media (max-width: 391px){
+    .rlm-prod-tile{
+        &__price{
+            font-size: 10px;
+        }
+    }
+}

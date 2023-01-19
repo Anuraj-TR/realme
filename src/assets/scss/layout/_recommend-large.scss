@@ -1,0 +1,39 @@
+.rlm-recmnd-lg{
+    width: 100%;
+    margin-top: $spacer-5;
+
+    &-tile_wrap{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        margin-right: -$spacer-2;
+        margin-left: -$spacer-2;
+    }
+
+    &__cnt{
+        width: calc(50% - $spacer-3);
+        margin-right: $spacer-2;
+        margin-left: $spacer-2;
+        margin-bottom: $spacer-3;
+    }
+
+    .rlm-prod-plate {
+        height: 100%;
+    }
+}
+
+@include mobile{
+    .rlm-recmnd-lg{
+        &-tile_wrap{
+            flex-direction: column;
+            margin: 0;
+        }
+
+        &__cnt{
+            width: 100%;
+            margin: 0;
+            margin-bottom: $spacer-3;
+        }
+
+    }
+}

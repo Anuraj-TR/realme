@@ -1,0 +1,35 @@
+.rlm-hot-phns{
+    width: 100%;
+    margin-top: $spacer-5;
+
+    &-tile_wrap{
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        margin-left: -$spacer-2;
+        margin-right: -$spacer-2;
+    }
+
+    .rlm-prod-tile{
+        width: calc((100% / 5) - $spacer-3);
+        margin-right: $spacer-2;
+        margin-left: $spacer-2;
+        margin-bottom: $spacer-3;
+        padding: $spacer-3 $spacer-2;
+
+        &__img{
+            
+            img{
+                width: 80%;
+            }
+        }
+    }
+}
+
+@include mobile{
+    .rlm-hot-phns{
+        .rlm-prod-tile{
+            width: calc(50% - $spacer-3);
+        }
+    }
+}
