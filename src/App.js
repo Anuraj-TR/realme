@@ -6,6 +6,7 @@ import { Banner } from "./componets/organism/banner";
 import { Catagory } from "./componets/organism/catagory";
 import { SalesRecommended } from "./componets/organism/sales-recommended";
 import { NewArrivals } from "./componets/organism/new-arrivals";
+import { HottestPhones } from "./componets/organism/hottest-phones";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Catagory />
         <SalesRecommended />
         <NewArrivals />
+        <HottestPhones />
       </div>
     </Router>
   );

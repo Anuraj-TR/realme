@@ -1,7 +1,6 @@
 import { SubHeading } from "../attom/heading";
 import { ProductPlate } from "../molicule/product-plate";
 
-import mainTileBg from "../../assets/images/new-arrival-img1.webp"
 import { newArrivals } from "../../Data/data";
 
 export const NewArrivals = () => {
